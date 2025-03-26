@@ -74,28 +74,3 @@ button {
     padding: 10px;
     cursor: pointer;
 }
-
-button:hover {
-    background-color: white;
-    color: black;
-}
-
-#messageList {
-    margin-top: 20px;
-    border-top: 1px solid white;
-    padding-top: 10px;
-}
-
-#adminButton {
-    display: none; /* Hides the button */
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* OPTIONAL: Style when it's visible */
-#adminButton.visible {
-    display: block; /* Shows only when allowed */
-}
