@@ -38,57 +38,6 @@
             }
         });
     });
-    <h2>Leave a Message to Eden!</h2>
-<textarea id="messageBox" placeholder="Write something for me..."></textarea>
-<button onclick="submitMessage()">Submit</button>
-<div id="messageList"></div>
-
-<!-- Hidden Admin Button (Only You Can See) -->
-<button id="adminButton" onclick="window.location.href='/admin.html'">View Messages</button>
-
-<script>
-    function submitMessage() {
-        let message = document.getElementById("messageBox").value;
-        if (message.trim() === "") {
-            alert("Please write something before submitting.");
-            return;
-        }
-
-        let messages = JSON.parse(localStorage.getItem("messages")) || [];
-        messages.push(message);
-        localStorage.setItem("messages", JSON.stringify(messages));
-
-        displayMessages();
-        document.getElementById("messageBox").value = ""; // Clear input
-    }
-
-    function displayMessages() {
-        let messages = JSON.parse(localStorage.getItem("messages")) || [];
-        let messageList = document.getElementById("messageList");
-        messageList.innerHTML = ""; 
-
-        messages.forEach(msg => {
-            let p = document.createElement("p");
-            p.textContent = msg;
-            messageList.appendChild(p);
-        });
-    }
-
-    // Show admin button if the correct code is entered
-    function checkAdminAccess() {
-        let adminPass = "mysecretcode"; // CHANGE THIS (but it's still weak security)
-        let enteredPass = prompt("Enter Admin Code:");
-        if (enteredPass === adminPass) {
-            document.getElementById("adminButton").classList.add("visible");
-        } else {
-            alert("Wrong code!");
-        }
-    }
-
-    // Call this function manually from DevTools to show the button
-    window.onload = displayMessages;
-    
-</script>
 </script>
 </body>
 </html>
