@@ -50,3 +50,8 @@ button:hover {
     background-color: white;
     color: black;
 }
+button {
+    display: block;
+    margin: 10px auto;
+}
+
