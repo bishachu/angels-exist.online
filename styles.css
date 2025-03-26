@@ -35,3 +35,18 @@ button:hover {
     background-color: white;
     color: black;
 }
+
+button {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    border: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
